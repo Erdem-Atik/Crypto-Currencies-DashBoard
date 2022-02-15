@@ -1,0 +1,57 @@
+* {
+  font-family: "Dongle", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: aqua;
+  text-align: center;
+  justify-content: center;
+}
+
+body {
+  justify-content: center;
+  background-color: rgb(32, 23, 24);
+}
+.select {
+  justify-content: center;
+  text-align: center;
+}
+select {
+  width: 15%;
+  height: 3rem;
+  font-size: 2.8rem;
+  color: #ffd700;
+  border: 3px solid #f7931a;
+  border-radius: 2px;
+}
+.crypto-container {
+  padding-top: 20rem;
+  margin-left: 25rem;
+  margin-right: 25rem;
+  font-size: 2.5rem;
+  color: #f7931a;
+  width: 50%;
+  height: 100vh;
+  background: url(backGround.jpeg);
+  background-size: cover;
+  background-position: center center;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style-type: none;
+  background-position: none;
+}
+
+li {
+  background-position: none;
+}
+
+footer {
+  color: #f7931a;
+}

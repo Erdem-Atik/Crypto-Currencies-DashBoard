@@ -4,23 +4,30 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Crypto Currencies</title>
     <script src="app.js" defer></script>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Open+Sans&family=Poppins&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class="select">
-      <select name="todos" class="filter-currencies">
-        <!-- <option value="all">All</option> -->
-        <option value="ETH">ETHERIUM</option>
-        <option value="BTC">BITCOIN</option>
-      </select>
+    <h1>CRYPTO DASHBOARD</h1>
+    <div class="crypto-container">
+      <div class="select">
+        <select name="currency" class="filter-currencies"></select>
+      </div>
+      <!-- <div><button class="curbutton">Select</button></div> -->
+      <div class="currencies-container">
+        <ul class="currencies"></ul>
+      </div>
     </div>
-    <div><button class="curbutton">Select</button></div>
-    <div class="container">
-      <ul class="currencies">
-        <li class="the currency">CURRENCIES</li>
-      </ul>
-    </div>
+    <footer class="notes">
+      NOTE: Not suitable for professional purpose. Thanks to
+      https://currencyfreaks.com/ for free web API
+    </footer>
   </body>
 </html>
