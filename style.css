@@ -33,9 +33,9 @@ select {
   margin-left: 25rem;
   margin-right: 25rem;
   font-size: 2.5rem;
-  color: #f7931a;
+  color: #ffff0d;
   width: 50%;
-  height: 100vh;
+  height: 85vh;
   background: url(backGround.jpeg);
   background-size: cover;
   background-position: center center;
@@ -53,5 +53,8 @@ li {
 }
 
 footer {
+  text-align: center;
   color: #f7931a;
+  font-size: 1.5rem;
+  height: 1.8rem;
 }
