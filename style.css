@@ -46,10 +46,13 @@ select {
 ul {
   list-style-type: none;
   background-position: none;
+  text-align: center;
 }
 
 li {
   background-position: none;
+  text-align: center;
+  margin: 0;
 }
 
 footer {
