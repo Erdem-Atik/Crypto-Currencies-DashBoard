@@ -4,6 +4,7 @@ const btn = document.querySelector(".curbutton");
 const filter = document.querySelector(".filter-currencies");
 
 const curexpress = function (cur) {
+  console.log(cur);
   const htmlMarkup = `<li class="currency">${cur}</li>`;
   currencies.innerHTML = "";
   currencies.insertAdjacentHTML("afterbegin", htmlMarkup);
@@ -12,7 +13,7 @@ const curexpress = function (cur) {
 const selectCur = function (rate) {
   rate.forEach((x, y) => {
     const markup = `
-    <option value="${y}: ${1 / x} USD">${y}</option>
+    <option value="${y}: ${(1 / x).toFixed(4)} USD">${y}</option>
   `;
     filter.insertAdjacentHTML("beforeend", markup);
   });

@@ -27,6 +27,7 @@ select {
   color: #ffd700;
   border: 3px solid #f7931a;
   border-radius: 2px;
+  margin: 0;
 }
 .crypto-container {
   padding-top: 20rem;
@@ -58,6 +59,15 @@ li {
 footer {
   text-align: center;
   color: #f7931a;
-  font-size: 1.5rem;
-  height: 1.8rem;
+  height: fit-content;
+  font-size: 1.2rem;
+  padding-left: 6rem;
+}
+
+footer a {
+  color: #f5f5f5;
+}
+
+a:hover {
+  color: yellow;
 }
