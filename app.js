@@ -24,6 +24,7 @@ const currencyFreak = async function () {
     `https://api.currencyfreaks.com/latest?apikey=${apikey}`
   );
   const rep = await res.json();
+  console.log(rep);
   return rep;
 };
 

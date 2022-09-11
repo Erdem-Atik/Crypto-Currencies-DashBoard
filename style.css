@@ -5,43 +5,58 @@
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
 }
+body {
+  background-color: #645f44;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+header {
+  margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  text-align: center;
+}
+.crypto-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  padding-top: 0;
+  width: 70%;
+  min-height: 100vh;
+  background: url(backGround.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  justify-content: center;
+  text-align: center;
+}
 
 h1 {
-  color: aqua;
-  text-align: center;
-  justify-content: center;
+  margin-top: 0;
+  color: white;
 }
 
-body {
-  justify-content: center;
-  background-color: rgb(32, 23, 24);
-}
-.select {
+.selectContainer {
   justify-content: center;
   text-align: center;
+}
+
+.selectContainer > h4 {
+  color: white;
 }
 select {
   width: 15%;
   height: 3rem;
-  font-size: 2.8rem;
+  font-size: 2.4rem;
   color: #ffd700;
   border: 3px solid #f7931a;
   border-radius: 2px;
   margin: 0;
-}
-.crypto-container {
-  padding-top: 20rem;
-  margin-left: 25rem;
-  margin-right: 25rem;
-  font-size: 2.5rem;
-  color: #ffff0d;
-  width: 50%;
-  height: 85vh;
-  background: url(backGround.jpeg);
-  background-size: cover;
-  background-position: center center;
-  justify-content: center;
-  align-items: center;
 }
 
 ul {
@@ -54,6 +69,8 @@ li {
   background-position: none;
   text-align: center;
   margin: 0;
+  font-size: 2rem;
+  color: #ffd700;
 }
 
 footer {
