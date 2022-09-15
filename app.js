@@ -1,4 +1,4 @@
-const apikey = "aa2569959bab4e4bad46da2002dff41d";
+const apikey = "aa2569959bab4e4bad46da2002dff41d"; // aa2569959bab4e4bad46da2002dff41d
 const currencies = document.querySelector(".currencies");
 const btn = document.querySelector(".curbutton");
 const filter = document.querySelector(".filter-currencies");
@@ -23,17 +23,27 @@ const currencyFreak = async function () {
   const res = await fetch(
     `https://api.currencyfreaks.com/latest?apikey=${apikey}`
   );
+  console.log(res);
+  if (res.status === 412 || !res.ok)
+    throw new Error(
+      "exceeded the limit of  requests for my API subscribed plan(I am using free packet :)"
+    );
+
   const rep = await res.json();
   console.log(rep);
   return rep;
 };
 
-currencyFreak().then((rslt) => {
-  const { base: b, date: initdate, rates: rates } = rslt;
-  const converted = new Map(Object.entries(rates).sort()); // search more
-  selectCur(converted);
-  filter.addEventListener("click", function (e) {
-    let val = e.target.value;
-    curexpress(val);
+currencyFreak()
+  .then((rslt) => {
+    const { base: b, date: initdate, rates: rates } = rslt;
+    const converted = new Map(Object.entries(rates).sort()); // search more
+    selectCur(converted);
+    filter.addEventListener("click", function (e) {
+      let val = e.target.value;
+      curexpress(val);
+    });
+  })
+  .catch(function (error) {
+    alert(error);
   });
-});
