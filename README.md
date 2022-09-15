@@ -9,5 +9,9 @@ I thought the newbies might be bored with the beginner project ideas; to-do, cal
 By the way, thanks CurrencyFreaks for great API(you can find them and other alternatives on https://github.com/public-apis/public-apis#cryptocurrency); I used their API to get crypto info.
 
 All the best!
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8b79d5de8c360a33698ee507df96e967a0bee945
 
 PS: I am exactly open to new ideea to develop/refactoring
