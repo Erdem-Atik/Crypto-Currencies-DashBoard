@@ -26,7 +26,7 @@ const currencyFreak = async function () {
   console.log(res);
   if (res.status === 412 || !res.ok)
     throw new Error(
-      "exceeded the limit of  requests for my API subscribed plan(I am using free packet :)"
+      "probably exceeded the limit of  requests for my API subscribed plan or the API has gone. I am using free packet :)"
     );
 
   const rep = await res.json();
