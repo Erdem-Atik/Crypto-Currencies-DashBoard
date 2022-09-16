@@ -3,8 +3,7 @@ const currencies = document.querySelector(".currencies");
 const btn = document.querySelector(".curbutton");
 const filter = document.querySelector(".filter-currencies");
 
-const curexpress = function (cur) {
-  console.log(cur);
+const curMarker = function (cur) {
   const htmlMarkup = `<li class="currency">${cur}</li>`;
   currencies.innerHTML = "";
   currencies.insertAdjacentHTML("afterbegin", htmlMarkup);
@@ -30,7 +29,6 @@ const currencyFreak = async function () {
     );
 
   const rep = await res.json();
-  console.log(rep);
   return rep;
 };
 
@@ -41,7 +39,7 @@ currencyFreak()
     selectCur(converted);
     filter.addEventListener("click", function (e) {
       let val = e.target.value;
-      curexpress(val);
+      curMarker(val);
     });
   })
   .catch(function (error) {
