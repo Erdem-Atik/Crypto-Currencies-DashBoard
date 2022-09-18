@@ -2,7 +2,7 @@ const apikey = "aa2569959bab4e4bad46da2002dff41d"; // aa2569959bab4e4bad46da2002
 const currencies = document.querySelector(".currencies");
 const btn = document.querySelector(".curbutton");
 const filter = document.querySelector(".filter-currencies");
-const pcount = document.querySelector("#pagecounter");
+const pCount = document.querySelector("#pagecounter");
 
 const curMarker = function (cur) {
   const htmlMarkup = `<li class="currency">${cur}</li>`;
@@ -24,35 +24,40 @@ const reqCounter = function () {
   const d = new Date();
   let curMonth = d.getMonth();
   let curYear = d.getFullYear();
-
   let startCount;
-  if (curYear === 2022 && curMonth === 8) {
-    startCount = 100;
-  } else {
-    startCount = 0;
+  let counter;
+
+  if (!pCount.textContent) {
+    console.log("run");
+    if (curYear === 2022 && curMonth === 8) {
+      startCount = 101;
+    } else {
+      startCount = 0;
+    }
+    pCount.textContent = startCount;
   }
 };
 
 reqCounter();
 
-const reqPercentage = function () {
-  const usageLimit = 1000;
-  let strtCount = +localStorage.getItem("sCount");
-  console.log(strtCount);
-  strtCount += 1;
-  console.log(strtCount);
-  localStorage.setItem("sCount", JSON.stringify(strtCount));
-  console.log(`%${Math.round((strtCount / usageLimit) * 100)}`);
-  const perc = `API USAGE(MONTLY): %$${Math.round(
-    (strtCount / usageLimit) * 100
-  )}`;
-  localStorage;
+// const reqPercentage = function () {
+//   const usageLimit = 1000;
+//   pCount.textContent = reqCounter();
+//   console.log(reqCounter());
 
-  // save on the local memory
-  curMarker(perc);
-};
+// pCount.textContent = strtCount;
+// localStorage.setItem("sCount", JSON.stringify(strtCount));
+// console.log(`%${Math.round((strtCount / usageLimit) * 100)}`);
+// const perc = `API USAGE(MONTLY): %$${Math.round(
+//   (strtCount / usageLimit) * 100
+// )}`;
+// localStorage;
 
-reqPercentage();
+// save on the local memory
+// curMarker(perc);
+// };
+
+// reqPercentage();
 
 // const currencyFreak = async function () {
 //   const res = await fetch(
